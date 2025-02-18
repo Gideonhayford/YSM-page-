@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSM Architectural Designs and Arts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YSM Architectural Designs and Arts</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="graffito.html">Graffito</a>
+                        <a href="andree finishing.html">Wall scheming</a>
+                        <a href="Pop Works.html">Pop Works</a>
+                        <a href="interiorextrior.html">Interior And Exterior Designs</a>
+                        <a href="Pencil drawing.html">Pencil Portrait</a>
+                        <a href="Picture Framing.html">Dump Proof Wearing</a>
+                        <a href="Deep Cleaning.html">Deep Cleaning</a>
+                        <a href="Renovation.html">Painting</a>
+                        <a href="Ac servicing.html">Canvas Painting</a>
+                        <a href="Wallpaper.html">Wall Arts</a>
+                        <a href="3-d designs.html">3-D Designs</a>
+                    </div>
+                </li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to YSM Architectural Designs and Arts</h1>  
+            <p>Your vision, our design. Creating spaces that inspire and delight.</p>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 YSM Architectural Designs and Arts. All rights reserved.</p>
+    </footer>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+        '2150315227.jpg',
+        'Robert Delaunay.jpg',
+    ]; 
+    let currentIndex = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 5000); // Change image every 5 seconds
+    changeBackground(); // Initial background
+});
+</script>
+</body>
+</html>

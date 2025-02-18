@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graffito</title>
+    <link rel="stylesheet" href="graffito.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YSM Architectural Designs and Arts</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="graffito.html">Graffito</a>
+                        <a href="andree finishing.html">Andree Finishing</a>
+                        <a href="Pop Works.html">Pop Works</a>
+                        <a href="interiorextrior.html">Interior And Exterior Designs</a>
+                        <a href="Pencil drawings.html">Pencil drawings</a>
+                        <a href="Picture Framing.html">Picture Framing</a>
+                        <a href="Deep Cleaning.html">Deep Cleaning</a>
+                        <a href="Renovation.html">Renovation</a>
+                        <a href="Ac servicing.html">Ac servicing</a>
+                        <a href="Wallpaper.html">Wallpaper</a>
+                    </div>
+                </li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="graffito-intro" class="section">
+            <div class="container">
+                <h1 class="section-title">Graffito</h1>
+                <p class="section-desc">Explore the art of graffito and discover what inspires us.</p>
+            </div>
+        </section>
+        <section id="graffito-gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Graffito Gallery</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="street_art_blue-1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="pasadena-graffiti-interactive.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="graffiti-art-urban-green-graffiti-wallpaper.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="graffiti-art-street-madrid.jpg" style="width:100%">
+                    </div>
+                    
+                    
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <!-- Add more dots as needed -->
+                </div>
+            </div>
+        </section>
+        <section id="what-we-do" class="section">
+            <div class="container">
+                <h2 class="section-title">What We Can Do About Graffito</h2>
+                <p class="section-desc">Our team of experts specializes in creating stunning graffito art that enhances any space. Whether it's for residential, commercial, or public projects, we bring creativity and craftsmanship to every piece.</p>
+                <p>We work closely with our clients to understand their vision and deliver custom solutions that reflect their unique style. From concept development to final execution, we handle all aspects of the graffito process with precision and care.</p>
+            </div>
+        </section>
+    </main>
+    <a href="index.html" class="btn-back-home">Back to Home</a>
+    <footer>
+        <p>&copy; 2024 YSM Architectural Designs and Arts. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - YSM Architectural Designs and Arts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YSM Architectural Designs and Arts</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="graffito.html">Graffito</a>
+                            <a href="andree finishing.html">Wall scheming</a>
+                            <a href="Pop Works.html">Pop Works</a>
+                            <a href="interiorextrior.html">Interior And Exterior Designs</a>
+                            <a href="Pencil drawings.html">Pencil Portrait</a>
+                            <a href="Picture Framing.html">Dump Proof Wearing</a>
+                            <a href="Deep Cleaning.html">Deep Cleaning</a>
+                            <a href="Renovation.html">Painting</a>
+                            <a href="Ac servicing.html">Canvas Painting</a>
+                            <a href="Wallpaper.html">Wall Arts</a>
+                            <a href="3-d designs.html">3-D Designs</a>
+                        </div>
+                </li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>YSM Architectural Designs and Arts is dedicated to bringing your creative visions to life through innovative design and craftsmanship.</p>
+            <div class="content">
+                <h2>Our Mission</h2>
+                <p>Our mission is to create spaces that inspire and delight. We strive to blend artistic expression with architectural elements, ensuring every project is unique and reflects our client's vision.</p>
+                
+                <h2>Our Services</h2>
+                <p>We offer a wide range of services, including:</p>
+                <ul>
+                    <li>Graffito</li>
+                    <li>Wall scheming</li>
+                    <li>Pop Works</li>
+                    <li>Interior and Exterior Designs</li>
+                    <li>Pencil Potrait</li>
+                    <li>3-D Designs</li>
+                    <li>Deep Cleaning</li>
+                    <li>Dump proof Wearing</li>
+                    <li>Canvas painting</li>
+                    <li>Wall Arts </li>
+                    <li>Painting</li>
+                </ul>
+                
+                <h2>Our Team</h2>
+                <p>Our team consists of experienced designers, architects, and craftsmen who are passionate about creating beautiful and functional spaces.</p>
+                
+                <h2>Why Choose Us?</h2>
+                <p>We are committed to excellence and customer satisfaction. Our attention to detail and dedication to quality ensures that every project we undertake is completed to the highest standards.</p>
+                
+                    <section id="graffito-gallery" class="section">
+                        <div class="container">
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <img src="photo_2024-07-10_05-56-32.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="photo_2024-07-10_05-56-38.jpg" style="width:100%">
+
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="photo_2024-08-14_04-30-30.jpg" style="width:100%">
+                                    
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                    <img src="photo_2024-08-14_04-29-20.jpg" style="width: 100%;">
+                                </div>
+                            
+                               
+                               
+            
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                               
+            
+                            </div>
+                            <br>
+            
+                            <!-- The dots/circles -->
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                
+                                <!-- Add more dots as needed -->
+                            </div>
+                        </div>
+
+                <a href="index.html" class="btn-back-home">Back to Home</a>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 YSM Architectural Designs and Arts. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
